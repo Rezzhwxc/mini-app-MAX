@@ -2,12 +2,49 @@
   margin: 0px; padding: 0px;
   overflow-y: hidden;
 }
+
 :root{
   --bg-color: #17181c; /* background */
   --font-color: #FFFFFF; /* font */
 
   --design-color1: #3A5FC2; /* first color */
   --design-color2: #58A292; /* second color */
+}
+
+/* Regular Inter */
+@font-face {
+  font-family: 'Inter';
+  src: url(/fonts/Inter-Regular.otf) format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Inter';
+  src: url(/fonts/Inter-Medium.otf) format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: 'Inter';
+  src: url(/fonts/Inter-SemiBold.otf) format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Inter';
+  src: url(/fonts/Inter-Bold.otf) format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @keyframes gradientMove {

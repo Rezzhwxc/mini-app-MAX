@@ -4,7 +4,7 @@ import './styles/App.css'
 import AuthPage from './pages/Auth';
 import MenuPage from './pages/Menu';
 import CartPage from './pages/Cart';
-import { Panel } from '@maxhub/max-ui';
+import { Panel, Flex, Typography } from '@maxhub/max-ui';
 
 type Screen = 'auth' | 'menu' | 'cart';
 
@@ -13,7 +13,15 @@ function App() {
 
   return (
     <Panel className='auth-screen'>
-      <h1 style={{letterSpacing:'6%', fontSize:24, textAlign:'center', margin:20}}>Авторизация</h1>
+        <h1 style={{letterSpacing:'6%', fontSize:'clamp(24px, 4vw, 40px)', textAlign:'center', marginBottom:20, fontFamily:'Inter, bold'}}>
+          Авторизация</h1>
+
+        <div className="box">
+            <p style={{fontSize:16, color:'var(--font-color)', fontFamily:'Inter'}}>
+              Введите свой ID:
+            </p>
+            <input type="text" />
+        </div>
     </Panel>
   )
 }

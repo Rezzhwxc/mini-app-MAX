@@ -1,0 +1,52 @@
+*{
+  margin: 0px; padding: 0px;
+  overflow-y: hidden;
+}
+:root{
+  --bg-color: #17181c; /* background */
+  --font-color: #FFFFFF; /* font */
+
+  --design-color1: #3A5FC2; /* first color */
+  --design-color2: #58A292; /* second color */
+}
+
+@keyframes gradientMove {
+  0%{
+    background-position: 0% 50%; /* starts at left */
+  }
+  50%{
+    background-position: 100% 50%; /* swift to right */
+  }
+  100%{
+    background-position: 0% 50%; /* end to back */
+  }
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+.auth-screen{
+  /* background: linear-gradient(135deg, var(--design-color1), var(--design-color2)); DEFAULT BG */
+  background: linear-gradient(135deg, var(--design-color1), var(--design-color2), var(--design-color1));
+  background-size: 300% 200%;
+  animation: gradientMove 5s ease infinite;
+
+  min-height: 100dvh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+
+  color: var(--font-color);
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+}

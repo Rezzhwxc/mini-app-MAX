@@ -13,15 +13,27 @@ function App() {
 
   return (
     <Panel className='auth-screen'>
-        <h1 style={{letterSpacing:'6%', fontSize:'clamp(24px, 4vw, 40px)', textAlign:'center', marginBottom:20, fontFamily:'Inter, bold'}}>
-          Авторизация</h1>
+        <h1 style={{letterSpacing:'8%', fontSize:'clamp(24px, 4vw, 40px)',
+          textAlign:'center', margin:'10px 0px', fontFamily:'Inter', fontWeight:700}}
+          >Авторизация</h1>
 
-        <div className="box">
-            <p style={{fontSize:16, color:'var(--font-color)', fontFamily:'Inter'}}>
+        <div className="middle">
+            <p style={{width:"100%", fontSize:18, color:'var(--font-color)', fontFamily:'Inter', textAlign:'left'}}>
               Введите свой ID:
             </p>
-            <input type="text" />
+            <input type="text" placeholder='ID сотрудника' />
         </div>
+
+        <button id='confirmId' style={{
+          width:'100%', height:'56px',
+          background:'transparent', outline:'none',
+          border:'1px solid var(--font-color)', borderRadius:'12px',
+
+          fontSize:'clamp(20px, 2.5vw, 28px)',  fontFamily:'Inter', fontWeight:'500',
+          letterSpacing:'3%', color:'var(--font-color)'
+        }}>
+          Войти
+        </button>
     </Panel>
   )
 }

@@ -6,10 +6,15 @@ import MenuPage from './pages/Menu';
 import CartPage from './pages/Cart';
 import { Panel,} from '@maxhub/max-ui';
 
+import {validEmployeeId} from './utils/validators'
+
 type Screen = 'auth' | 'menu' | 'cart';
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState<Screen>('auth');
+
+  
+  const [id, setId] = useState('');
 
   return (
     <Panel className='auth-screen'>
@@ -19,10 +24,11 @@ function App() {
         <div className="middle">
             <p>Введите свой ID:</p>
 
-            <input type="text" id='ID_user' placeholder='ID сотрудника'/>
+            <input type="text" id='ID_user' placeholder='ID сотрудника'
+            value={id} onChange={(e) => setId(e.target.value)}/>
         </div>
 
-        <button id='confirmId'>Войти</button>
+        <button id='confirmId' onClick={() => validEmployeeId(id)}>Войти</button>
 
     </Panel>
   )

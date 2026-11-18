@@ -1,3 +1,110 @@
 body{
   margin: 0; padding: 0;
+  background-color: var(--bg-color);
+}
+
+.auth-screen{
+  /* background: linear-gradient(135deg, var(--design-color1), var(--design-color2)); DEFAULT BG */
+  background: linear-gradient(135deg, var(--design-color1), var(--design-color2), var(--design-color1));
+  background-size: 300% 200%;
+  animation: gradientMove 5s ease infinite;
+
+  min-height: 100dvh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  padding: 6%;
+  box-sizing: border-box;
+
+  color: var(--font-color);
+}
+
+h1{
+  letter-spacing: 8%;
+  font-size: clamp(24px, 4vw, 40px);
+  user-select: none;
+  -webkit-user-select: none; 
+  text-align: center;
+  margin: 10px 0;
+  font-family: 'Inter';
+  font-weight: 700;
+}
+
+.middle{
+  width: 100%;
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: left;
+  color:var(--font-color);
+  font-size: 18px;
+  padding-bottom: 30px;
+  font-family: 'Inter';
+
+  & input{
+  width: 100%;
+  height: 52px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  outline: none;
+  border: none;
+  color: var(--font-color);
+  font-family: 'Inter'; font-size: 20px; text-align: center;
+}
+}
+input::placeholder{
+  padding: 0px 16px; 
+  font-family: 'Inter'; font-size: 15px;  text-align: start;
+  user-select: none;
+}
+
+#confirmId{
+  width: 100%;
+  height: clamp(56px, 7vw, 64px);
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid var(--font-color);
+  border-radius: 12px;
+  transition: all ease 0.3s;
+  
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 3%;
+  color: var(--font-color);
+}
+#confirmId:hover{
+  scale: 1.04;
+  background: rgba(255, 255, 255, 0.1)
+}
+#confirmId:active{
+  scale: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .auth-screen{
+    padding: 1% 18%;
+  }
+  .middle{
+    flex: 0;
+    & input{
+      height: 68px;
+      font-size: 22px;
+      border-radius: 20px;
+    }
+  }
+  input::placeholder{
+    font-size: 22px;
+  }
 }
